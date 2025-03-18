@@ -111,10 +111,10 @@ const Expenses = () => {
   }, [expenseStoredData]);
 
   return (
-    <div className="min-w-[1080px] min-h-screen bg-rose-100">
-      <p className="text-3xl text-center font-bold mr-12 mt-4">Expenses</p>
+    <div className="min-w-[1000px] min-h-screen bg-rose-100 pr-14 mt-2 rounded-s-3xl">
+      <p className="text-3xl text-center font-bold mr-12 mt-2">Expenses</p>
       <div className="flex justify-center">
-        <div className="bg-white p-4 rounded-xl w-96 my-12">
+        <div className="bg-white p-4 rounded-xl w-96 my-9">
           <p className="text-center font-bold text-xl">
             Total Expenses: <span className="text-rose-500 font-bold">{totalExpense} Tk</span>
           </p>
@@ -125,7 +125,7 @@ const Expenses = () => {
           <div>
             <label>Title:</label><br />
             <input
-              className="input input-bordered input-primary w-34 max-w-xs"
+              className="input input-bordered input-primary w-40 "
               type="text"
               value={inputValue}
               onChange={handleInputChange}
@@ -165,12 +165,12 @@ const Expenses = () => {
             />
           </div><br />
           <div className="flex justify-center mr-28">
-            <button className="btn btn-secondary my-4" type="submit">Save Expense</button>
+            <button className="btn btn-secondary my-2" type="submit">Save Expense</button>
           </div>
         </form>
         <div className="mr-16 flex-1">
           <div className="flex justify-center">
-            <div className="bg-white p-3 rounded-xl mb-4 w-96">
+            <div className="bg-white p-3 rounded-xl mb-4 w-96 mt-5">
               <p className="text-center font-bold">Expense Details</p>
             </div>
           </div>
