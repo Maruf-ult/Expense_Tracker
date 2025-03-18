@@ -23,8 +23,8 @@ function Login() {
         console.log(result);
 
         if (result.success) {
-          // Assuming the result contains user ID in `result.userId`
           localStorage.setItem('userId', result.userId);
+          localStorage.setItem('profileName', result.name);
           navigate('/home');
         } else {
           alert("Incorrect password");
@@ -35,9 +35,9 @@ function Login() {
 
   return (
     <>
-      <div className="min-h-screen bg-red-100 background-color: rgb(254 226 226);">
-        <div className="hero hero-content flex-col">
-          <div className="text-center lg:text-left">
+      <div className="h-screen bg-red-100 background-color: rgb(254 226 226);">
+        <div className="hero hero-content flex-col  ">
+          <div className="text-center lg:text-left  ">
             <p className="py-2 text-violet-500 font-sans text-3xl">Expense Tracker</p>
             <h1 className="text-5xl font-bold">Login now</h1>
           
