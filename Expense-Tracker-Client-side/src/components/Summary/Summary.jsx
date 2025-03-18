@@ -50,8 +50,8 @@ const Summary=()=>{
 
 
 
-        <div className="min-w-[980px]  min-h-screen bg-rose-100">
-          <div className="flex flex-row justify-evenly  p-5">
+        <div className="min-w-[965px]  min-h-screen bg-rose-100 mt-2 rounded-s-3xl">
+          <div className="flex flex-row justify-evenly  p-4 mr-6">
             <div>
             <div className="bg-white p-4 rounded-full text-center mb-4">
            <p className="text-xl font-bold">income summary </p>
