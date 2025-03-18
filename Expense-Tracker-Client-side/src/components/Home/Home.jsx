@@ -6,7 +6,7 @@ const Home=()=>{
 
   return(
     <>
-    <div className="flex flex-row gap-12 max-w-screen-2xl">
+    <div className="flex flex-row gap-8 max-w-screen-2xl">
       <Headers></Headers>
       <Outlet></Outlet>
 </div>
