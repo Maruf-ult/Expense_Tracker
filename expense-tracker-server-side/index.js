@@ -1,117 +1,3 @@
-// const express = require('express')
-// const mongoose = require('mongoose')
-// const cors= require('cors')
-// const userInformation = require('./models/userInfo')
-// const incomeSchema=require('./models/incomeModel')
-// const expenseSchema=require('./models/expensModel')
-// const app = express();
-// const port= process.env.PORT ||5000;
-
-
-// // middleware
-// app.use(express.json());
-// app.use(cors());
-
-
-// mongoose.connect("mongodb://127.0.0.1:27017/employee");
-// // Login information section
- 
-// app.get('/register',async(req,res)=>{
-//    try{
-//     const loginInfo=await userInformation.find();
-//     res.json(loginInfo)
-//    }
-//    catch(err)
-//    {
-//     res.status(500).json({message:err.message});
-//    }
-// })
-// app.post('/register',(req,res)=>{
-//   userInformation.create(req.body)
-//   .then(employee => res.json(employee))
-//   .catch(err => res.json(err))
-// })
-// app.post('/login',(req,res)=>{
-//    const {email,password}=req.body;
-//     userInformation.findOne({email: email})
-//     .then(user=>{
-//         if(user){
-//             if(user.password===password){
-//                 res.json("success")
-                
-//             }
-//             else{
-//                 res.json("inccorect password")
-//             }
-//         }
-//         else{
-//             res.json("record Not found")
-//         }
-//     })
-// })
-// // incomedata
-
-// app.get('/add-income',async(req,res)=>{
-//     try{
-//         const incomeInfo=await incomeSchema.find();
-//         res.json(incomeInfo)
-//        }
-//        catch(err)
-//        {
-//         res.status(400).json({message:err.message});
-//        }
-// })
-    
-
-
-//   app.post('/add-income',async(req,res)=>{
-  
-//     incomeSchema.create(req.body)
-//     .then(employee => res.json(employee))
-//     .catch(err => res.json(err))
-//   })
-// // income Delete
-
-
-
-
-// //   expense data
-
-
-  
-// app.get('/add-expense',async(req,res)=>{
-//     try{
-//         const expenseInfo=await expenseSchema.find();
-//         res.json(expenseInfo)
-//        }
-//        catch(err)
-//        {
-//         res.status(400).json({message:err.message});
-//        }
-// })
-    
-
-
-//   app.post('/add-expense',async(req,res)=>{
-  
-//     expenseSchema.create(req.body)
-//     .then(employee => res.json(employee))
-//     .catch(err => res.json(err))
-//   })
-
-
-
- 
-// app.get('/',(req,res)=>{
-//     res.send("simple server is running");
-// })
-
-// // 
-
-
-// app.listen(port,()=>{
-//     console.log(`simple server is listening on ${port}`);
-// });
 
 
 const express = require('express');
@@ -128,6 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect("mongodb://127.0.0.1:27017/employee");
+
 
 app.get('/register', async (req, res) => {
   try {
@@ -152,7 +39,9 @@ app.post('/login', (req, res) => {
     .then(user => {
       if (user) {
         if (user.password === password) {
-          res.json({ success: true, userId: user._id });  // Include user ID in the response
+          // res.json({ success: true, userId: user._id });
+          res.status(200).json({ success: true, userId: user._id, name: user.name });
+
         } else {
           res.json({ success: false, message: "Incorrect password" });
         }
@@ -248,3 +137,4 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`simple server is listening on ${port}`);
 });
+console.log("database connected successfully")
