@@ -116,25 +116,25 @@ const Transactions = () => {
     <>
     <div>
    
-      <div className="min-w-[980px] min-h-screen bg-rose-100">
-      <div className="bg-white p-4 rounded-xl w-[900px]  ml-4">
+      <div className="min-w-[900px] min-h-screen bg-rose-100 mt-2 pt-3 rounded-s-3xl">
+      <div className="bg-white p-4 rounded-xl w-[750px]  ml-20 ">
           <Line data={data} options={options} />
         </div> 
-         <div className="flex flex-col items-center">
-      <div className="flex  flex-row gap-4">
-        <div className="bg-white p-4 rounded-xl w-96 my-4">
+         <div className="flex flex-col items-center  ">
+      <div className="flex  flex-row gap-4  ">
+        <div className="bg-white p-3 rounded-xl w-96 my-4">
           <p className="text-center font-bold text-xl">
             Total Incomes: <span className="text-green-500 font-bold">{totalIncome} Tk</span>
           </p>
         </div>
-        <div className="bg-white p-4 rounded-xl w-96 my-4">
+        <div className="bg-white p-3 rounded-xl w-96 my-4">
           <p className="text-center font-bold text-xl">
-            Total Expenses: <span className="text-green-500 font-bold">{totalExpense} Tk</span>
+            Total Expenses: <span className="text-red-500 font-bold">{totalExpense} Tk</span>
           </p>
         </div>
         </div>
        
-        <div className="bg-white p-4 rounded-xl w-96 ">
+        <div className="bg-white p-2 rounded-xl w-96  ">
           <p className="text-center font-bold text-xl">
             Net Income: <span className="text-green-500 font-bold">{netIncome} Tk</span>
           </p>
