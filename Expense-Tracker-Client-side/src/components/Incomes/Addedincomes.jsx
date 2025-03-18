@@ -4,7 +4,7 @@ import { CgMathPlus } from "react-icons/cg";
 import { MdDelete } from "react-icons/md";
 
 const Addedincomes = ({ income, deleteIncome }) => {
-  const { _id, title, amount, date } = income; // Assuming each income has a unique _id
+  const { _id, title, amount, date } = income; 
 
   const formattedDate = new Date(date).toLocaleDateString('en-GB');
 
@@ -26,8 +26,8 @@ const Addedincomes = ({ income, deleteIncome }) => {
   };
 
   return (
-    <div className={`px-2 rounded-xl mb-4 ${getBackgroundColor(title)}`}>
-      <div className="flex flex-row justify-between items-center gap-4 ml-4">
+    <div className={`px-2 rounded-xl mb-4 mt-2 ${getBackgroundColor(title)}`}>
+      <div className="flex flex-row justify-between items-center gap-4 ml-4 ">
         <div>
           <p className="font-bold">From: {title}</p>
           <div className="flex flex-row items-center gap-2">
@@ -37,10 +37,10 @@ const Addedincomes = ({ income, deleteIncome }) => {
             </p>
           </div>
         </div>
-        <div className="mr-4">
+        <div className="mr-10">
           <button
             className="font-bold text-3xl text-center"
-            onClick={() => deleteIncome(_id)} // Call the delete function with the income id
+            onClick={() => deleteIncome(_id)} 
           >
             <MdDelete />
           </button>
