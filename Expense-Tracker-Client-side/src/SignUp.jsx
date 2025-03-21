@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 function SignUp() {
 
   const [name, setName] = useState();
@@ -26,8 +27,7 @@ function SignUp() {
         console.log(data);
         navigate("/login");
         if (data._id) {
-        
-          alert("Resgistered Successfully")
+          toast.success("Registered Successfully");
           form.reset();
         }
       });

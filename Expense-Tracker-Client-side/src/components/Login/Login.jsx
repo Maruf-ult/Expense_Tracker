@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import toast from "react-hot-toast";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,11 +23,12 @@ function Login() {
         console.log(result);
 
         if (result.success) {
+          toast.success(`Welcome ${result.userId}!!`);
           localStorage.setItem('userId', result.userId);
           localStorage.setItem('profileName', result.name);
           navigate('/home');
         } else {
-          alert("Incorrect password");
+          toast.error("Incorrect password or gmail");
         }
       })
       .catch(err => console.log(err));

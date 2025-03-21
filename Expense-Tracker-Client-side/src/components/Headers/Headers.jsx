@@ -19,7 +19,7 @@ const Headers = () => {
     if (window.confirm("Are you sure you want to logout?")) {
       localStorage.removeItem("userId");
       localStorage.removeItem("profileName");
-      window.location.href = "/";
+      window.location.href = "https://expense-tracker-3-ejs5.onrender.com";
     }
   };
 

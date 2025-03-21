@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Addedexpense from "./Addedexpense";
+import toast from "react-hot-toast";
 
 const Expenses = () => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -64,6 +65,7 @@ const Expenses = () => {
       console.log(result);
       if (!result._id) {
         // alert('An error occurred');
+        toast.error("An error occured")
       } else {
         setExpenseStoredData([...expenseStoredData, { ...newExpense, _id: result._id }]);
         setInputValue('');
@@ -71,6 +73,7 @@ const Expenses = () => {
         setAmount('');
         setDate('');
         setIsInputEditable(false);
+        toast.success("Expense added successfully");
       }
     } catch (error) {
       console.error('Error:', error);
@@ -85,9 +88,10 @@ const Expenses = () => {
       });
       if (response.ok) {
         setExpenseStoredData(expenseStoredData.filter(expense => expense._id !== id));
+        toast.success("Expense deleted successfully");
       } else {
         const result = await response.json();
-        alert(result.message || 'An error occurred');
+        toast.error(result.message || 'An error occurred');
       }
     } catch (error) {
       console.error('Error:', error);

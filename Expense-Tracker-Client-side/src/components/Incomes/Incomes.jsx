@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import Addedincomes from "./Addedincomes";
+import toast from "react-hot-toast";
 
 const Incomes = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -66,7 +67,7 @@ const Incomes = () => {
       const result = await response.json();
       console.log(result);
       if (!result._id) {
-        alert("An error occurred");
+        toast.error("An error occurred");
       } else {
         setIncomeStoredData([
           ...incomeStoredData,
@@ -77,6 +78,7 @@ const Incomes = () => {
         setAmount("");
         setDate("");
         setIsInputEditable(false);
+        toast.success("Income added successfully");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -95,8 +97,10 @@ const Incomes = () => {
         setIncomeStoredData(
           incomeStoredData.filter((income) => income._id !== id)
         );
+        toast.success("Income deleted successfully");
       } else {
-        alert("An error occurred");
+      
+        toast.error("An error occurred");
       }
     } catch (error) {
       console.error("Error:", error);
