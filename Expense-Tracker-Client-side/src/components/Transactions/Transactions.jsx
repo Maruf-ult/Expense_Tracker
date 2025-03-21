@@ -116,8 +116,8 @@ const Transactions = () => {
     <>
     <div>
    
-      <div className="min-w-[1130px] min-h-screen bg-cyan-600 mt-2 pt-3 rounded-s-3xl">
-      <div className="bg-white p-4 rounded-xl w-[750px]  ml-20 ">
+      <div className="min-w-[1170px] min-h-screen bg-cyan-600 mt-2 pt-3 rounded-s-3xl">
+      <div className="bg-white p-4 rounded-xl w-[750px]  ml-48 ">
           <Line data={data} options={options} />
         </div> 
          <div className="flex flex-col items-center  ">
