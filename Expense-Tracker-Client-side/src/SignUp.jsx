@@ -35,7 +35,7 @@ function SignUp() {
 
   return (
     <>
-      <div className=" h-screen  bg-red-100	background-color: rgb(254 226 226); pl-10 pt-10">
+      <div className=" h-screen  bg-red-100	background-color: rgb(254 226 226); pl-14 pt-10">
         <div className=" hero hero-content flex-col ">
           <div className="text-center lg:text-left">
             <p className="py-2 text-violet-500 font-sans text-3xl">
@@ -55,7 +55,7 @@ function SignUp() {
                     onChange={(e) => setName(e.target.value)}
                     type="text"
                     placeholder="your name"
-                    className="input input-bordered"
+                    className="input input-bordered px-2"
                     required
                   />
 
@@ -66,7 +66,7 @@ function SignUp() {
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
                     placeholder="email"
-                    className="input input-bordered"
+                    className="input input-bordered px-2"
                     required
                   />
                 </div>
@@ -78,7 +78,7 @@ function SignUp() {
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
                     placeholder="password"
-                    className="input input-bordered"
+                    className="input input-bordered px-2"
                     required
                   />
                   <label className="label">

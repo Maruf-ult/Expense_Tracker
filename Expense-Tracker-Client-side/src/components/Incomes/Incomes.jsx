@@ -127,7 +127,7 @@ const Incomes = () => {
   }, [incomeStoredData]);
 
   return (
-    <div className="min-w-[1300px] min-h-screen bg-emerald-500  pr-14 mt-2 rounded-s-3xl">
+    <div className="min-w-[1100px] min-h-screen bg-emerald-500  pr-14 mt-2 rounded-s-3xl">
       <p className="text-3xl text-center font-bold mr-12 mt-2">Incomes</p>
       <div className="flex justify-center">
         <div className="bg-white p-4 rounded-xl w-96 my-9">
@@ -137,7 +137,7 @@ const Incomes = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-evenly ml-16   ">
+      <div className="flex flex-row justify-evenly ml-16  ">
         <form className="flex-1  " onSubmit={handleSubmit}>
           <div >
             <label>Title:</label>

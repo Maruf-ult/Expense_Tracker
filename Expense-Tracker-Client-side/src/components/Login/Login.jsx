@@ -36,27 +36,27 @@ function Login() {
 
   return (
     <>
-      <div className="h-screen bg-red-100 background-color: rgb(254 226 226); pt-10 pl-10">
+      <div className="h-screen bg-red-100 background-color: rgb(254 226 226); pt-10 pl-14">
         <div className="hero hero-content flex-col  ">
           <div className="text-center lg:text-left   ">
             <p className="py-2 text-violet-500 font-sans text-3xl">Expense Tracker</p>
             <h1 className="text-5xl font-bold">Login now</h1>
           
           </div>
-          <div className="flex gap-8 flex-col bg-slate-200 p-8">
+          <div className="flex gap-8 flex-col bg-slate-300 p-8">
             <div className="shrink-0 w-full max-w-sm">
               <form onSubmit={handleSubmit} className="card-body">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
                   </label>
-                  <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email" className="input input-bordered" required />
+                  <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email" className="input input-bordered px-2" required />
                 </div>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Password</span>
                   </label>
-                  <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" className="input input-bordered" required />
+                  <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" className="input input-bordered px-2" required />
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                   </label>

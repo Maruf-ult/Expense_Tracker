@@ -116,7 +116,7 @@ const Transactions = () => {
     <>
     <div>
    
-      <div className="min-w-[1300px] min-h-screen bg-cyan-600 mt-2 pt-3 rounded-s-3xl">
+      <div className="min-w-[1100px] min-h-screen bg-cyan-600 mt-2 pt-3 rounded-s-3xl">
       <div className="bg-white p-4 rounded-xl w-[750px]  ml-20 ">
           <Line data={data} options={options} />
         </div> 
