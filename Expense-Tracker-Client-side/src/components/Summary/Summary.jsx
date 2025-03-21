@@ -50,10 +50,10 @@ const Summary=()=>{
 
 
 
-        <div className="min-w-[965px]  min-h-screen bg-rose-100 mt-2 rounded-s-3xl">
+        <div className="min-w-[965px]  min-h-screen bg-slate-400 mt-2 rounded-s-3xl">
           <div className="flex flex-row justify-evenly  p-4 mr-6">
             <div>
-            <div className="bg-white p-4 rounded-full text-center mb-4">
+            <div className="bg-white p-4  text-center mb-4">
            <p className="text-xl font-bold">income summary </p>
            </div>
            <div>
@@ -69,13 +69,13 @@ const Summary=()=>{
             }
             
             </div>
-            <div className="bg-white p-4 rounded-full text-center mb-4">
-           <p className="text-xl font-bold">Total Incomes: <span className="text-green-600 font-bold">{totalIncome}</span> Tk</p>
+            <div className="bg-zinc-50 p-4 rounded-full text-center mb-4">
+           <p className="text-xl font-bold ">Total Incomes: <span className="text-green-600 font-bold">{totalIncome}</span> Tk</p>
            </div>
             </div>
             
             <div>
-            <div className="bg-white p-4 rounded-full text-center mb-4">
+            <div className="bg-white p-4  text-center mb-4">
               <p className="text-xl font-bold">Expense summary</p>
               </div>
               <div>
@@ -90,7 +90,7 @@ const Summary=()=>{
           }
           </div>
 
-          <div className="bg-white p-4 rounded-full text-center mb-4">
+          <div className="bg-zinc-50 p-4 rounded-full text-center mb-4">
            <p className="text-xl font-bold">Total Expenses: <span className="text-red-600 font-bold">{totalExpense}</span> Tk</p>
            </div>
             

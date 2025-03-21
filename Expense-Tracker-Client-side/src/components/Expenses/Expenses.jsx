@@ -115,7 +115,7 @@ const Expenses = () => {
   }, [expenseStoredData]);
 
   return (
-    <div className="min-w-[1000px] min-h-screen bg-rose-100 pr-14 mt-2 rounded-s-3xl">
+    <div className="min-w-[1000px] min-h-screen bg-rose-400 pr-14 mt-2 rounded-s-3xl">
       <p className="text-3xl text-center font-bold mr-12 mt-2">Expenses</p>
       <div className="flex justify-center">
         <div className="bg-white p-4 rounded-xl w-96 my-9">
