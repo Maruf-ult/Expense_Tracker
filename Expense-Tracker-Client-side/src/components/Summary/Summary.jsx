@@ -50,7 +50,7 @@ const Summary=()=>{
 
 
 
-        <div className="min-w-[965px]  min-h-screen bg-slate-400 mt-2 rounded-s-3xl">
+        <div className="min-w-[1300px]  min-h-screen bg-slate-400 mt-2 rounded-s-3xl">
           <div className="flex flex-row justify-evenly  p-4 mr-6">
             <div>
             <div className="bg-white p-4  text-center mb-4">

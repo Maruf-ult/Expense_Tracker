@@ -36,14 +36,14 @@ function Login() {
 
   return (
     <>
-      <div className="h-screen bg-red-100 background-color: rgb(254 226 226); pt-8 pl-8">
+      <div className="h-screen bg-red-100 background-color: rgb(254 226 226); pt-10 pl-10">
         <div className="hero hero-content flex-col  ">
           <div className="text-center lg:text-left   ">
             <p className="py-2 text-violet-500 font-sans text-3xl">Expense Tracker</p>
             <h1 className="text-5xl font-bold">Login now</h1>
           
           </div>
-          <div className="flex gap-8 flex-col bg-slate-200 p-4">
+          <div className="flex gap-8 flex-col bg-slate-200 p-8">
             <div className="shrink-0 w-full max-w-sm">
               <form onSubmit={handleSubmit} className="card-body">
                 <div className="form-control">

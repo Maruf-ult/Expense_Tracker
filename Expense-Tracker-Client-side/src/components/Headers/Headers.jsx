@@ -25,7 +25,7 @@ const Headers = () => {
 
   return (
     <>
-      <div className="min-w-72 mt-2 bg-gradient-to-r from-rose-200 to-rose-100 rounded-e-3xl">
+      <div className="min-w-80 mt-2 bg-gradient-to-r from-rose-200 to-rose-100 rounded-e-3xl">
         <div className="grid grid-rows-5 gap-8 mt-6 justify-center">
    
           <div className="flex justify-center items-center">
