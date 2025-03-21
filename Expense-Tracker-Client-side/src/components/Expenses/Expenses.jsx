@@ -53,7 +53,7 @@ const Expenses = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/add-expense', {
+      const response = await fetch('https://expense-tracker-2-bn31.onrender.com/add-expense', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -80,7 +80,7 @@ const Expenses = () => {
   const handleDeleteExpense = async (id) => {
     console.log(id);
     try {
-      const response = await fetch(`http://localhost:5000/expense/${id}`, {
+      const response = await fetch(`https://expense-tracker-2-bn31.onrender.com/expense/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -95,7 +95,7 @@ const Expenses = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/add-expense?userId=' + userId)
+    fetch('https://expense-tracker-2-bn31.onrender.com/add-expense?userId=' + userId)
       .then(res => res.json())
       .then(data => {
         setExpenseStoredData(data);

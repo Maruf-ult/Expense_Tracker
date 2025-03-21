@@ -10,7 +10,7 @@ const Transactions = () => {
   const [totalExpense, setTotalExpense] = useState(0);
   const userId = localStorage.getItem('userId');
   useEffect(() => {
-    fetch('http://localhost:5000/add-income?userId=' + userId)
+    fetch('https://expense-tracker-2-bn31.onrender.com/add-income?userId=' + userId)
       .then(res => res.json())
       .then(data => {
         setIncomeStoredData(data);
@@ -26,7 +26,7 @@ const Transactions = () => {
   }, [incomeStoredData]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/add-expense?userId=' + userId)
+    fetch('https://expense-tracker-2-bn31.onrender.com/add-expense?userId=' + userId)
       .then(res => res.json())
       .then(data => {
         setExpenseStoredData(data);

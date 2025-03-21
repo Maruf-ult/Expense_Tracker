@@ -56,7 +56,7 @@ const Incomes = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/add-income", {
+      const response = await fetch("https://expense-tracker-2-bn31.onrender.com/add-income", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +86,7 @@ const Incomes = () => {
   const handleDeleteIncome = async (id) => {
     console.log(id);
     try {
-      const response = await fetch(`http://localhost:5000/income/${id}`, {
+      const response = await fetch(`https://expense-tracker-2-bn31.onrender.com/income/${id}`, {
         method: "DELETE",
       });
       const result = await response.json();
@@ -104,7 +104,7 @@ const Incomes = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/add-income?userId=" + userId)
+    fetch("https://expense-tracker-2-bn31.onrender.com/add-income?userId=" + userId)
       .then((res) => res.json())
       .then((data) => {
         setIncomeStoredData(data);

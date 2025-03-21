@@ -14,7 +14,7 @@ function SignUp() {
 
     const loginUser = { name, email, password };
     console.log(loginUser);
-    fetch("http://localhost:5000/register", {
+    fetch("https://expense-tracker-2-bn31.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
