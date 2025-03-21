@@ -13,7 +13,8 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/employee");
+// mongoose.connect("mongodb://127.0.0.1:27017/employee");
+ mongoose.connect("mongodb+srv://marufapurbo911:34oZdfCBMCOvknMP@cluster0.v5vkx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 
 app.get('/register', async (req, res) => {
