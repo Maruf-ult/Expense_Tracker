@@ -35,7 +35,7 @@ function SignUp() {
 
   return (
     <>
-      <div className=" h-screen  bg-red-100	background-color: rgb(254 226 226); pl-14 pt-10">
+      <div className=" h-screen  bg-red-100	background-color: rgb(254 226 226); pl-20 pt-10">
         <div className=" hero hero-content flex-col ">
           <div className="text-center lg:text-left">
             <p className="py-2 text-violet-500 font-sans text-3xl">
