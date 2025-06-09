@@ -112,39 +112,41 @@ const Transactions = () => {
     },
   };
 
-  return (
-    <>
-    <div>
-   
-      <div className="min-w-[1170px] min-h-screen bg-cyan-600 mt-2 pt-3 rounded-s-3xl">
-      <div className="bg-white p-4 rounded-xl w-[750px]  ml-48 ">
-          <Line data={data} options={options} />
-        </div> 
-         <div className="flex flex-col items-center  ">
-      <div className="flex  flex-row gap-4  ">
-        <div className="bg-white p-3 rounded-xl w-96 my-4">
-          <p className="text-center font-bold text-xl">
-            Total Incomes: <span className="text-green-500 font-bold">{totalIncome} Tk</span>
-          </p>
-        </div>
-        <div className="bg-white p-3 rounded-xl w-96 my-4">
-          <p className="text-center font-bold text-xl">
-            Total Expenses: <span className="text-red-500 font-bold">{totalExpense} Tk</span>
-          </p>
-        </div>
-        </div>
-       
-        <div className="bg-white p-2 rounded-xl w-96  ">
-          <p className="text-center font-bold text-xl">
-            Net Income: <span className="text-green-500 font-bold">{netIncome} Tk</span>
-          </p>
-        </div>
-        </div>
-       
+return (
+  <div className="min-h-[89vh] -mt-3 bg-cyan-600 flex flex-col items-center p-3 rounded-s-3xl" >
+    
+    {/* Chart Container */}
+    <div className="bg-white p-3 rounded-xl w-full max-w-2xl">
+      <Line data={data} options={options} />
+    </div>
+
+    {/* Income and Expense Summary */}
+    <div className="flex flex-col md:flex-row gap-3 mt-4 w-full max-w-lg">
+      
+      {/* Total Income */}
+      <div className="bg-white p-3 rounded-xl w-full text-center">
+        <p className="font-bold text-lg">
+          Total Income: <span className="text-green-500 font-bold">{totalIncome} Tk</span>
+        </p>
       </div>
+
+      {/* Total Expenses */}
+      <div className="bg-white p-3 rounded-xl w-full text-center">
+        <p className="font-bold text-lg">
+          Total Expenses: <span className="text-red-500 font-bold">{totalExpense} Tk</span>
+        </p>
       </div>
-    </>
-  );
+    </div>
+
+    {/* Net Income Box */}
+    <div className="bg-white p-3 rounded-xl w-full max-w-sm mt-3 text-center">
+      <p className="font-bold text-lg">
+        Net Income: <span className="text-green-500 font-bold">{netIncome} Tk</span>
+      </p>
+    </div>
+
+  </div>
+);
 }
 
 export default Transactions;

@@ -1,18 +1,21 @@
 import { Outlet } from "react-router-dom";
 import Headers from "../Headers/Headers";
 
-const Home=()=>{
+const Home = () => {
+  return (
+    <div className="flex flex-col md:flex-row">
+      {/* Sidebar (Sticky instead of Fixed) */}
+      <div className="md:w-64 w-full ">
+        <Headers />
+      </div>
+
+      {/* Main Content - Adjusted for mobile */}
+      <div className="flex-1 p-4 overflow-auto">
+        <Outlet />
+      </div>
+    </div>
+  );
+};
 
 
-  return(
-    <>
-    <div className="flex flex-row gap-8 max-w-screen-2xl">
-      <Headers></Headers>
-      <Outlet></Outlet>
-</div>
-    </>
-  )
-
-
-}
 export default Home;

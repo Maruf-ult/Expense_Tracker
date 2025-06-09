@@ -4,7 +4,7 @@ const Errorpage=()=>{
     return(
       <>
         <div className="w-96 bg-red-200">
-           <p>hello</p>
+           <p>Error</p>
         </div>
       </>
     )

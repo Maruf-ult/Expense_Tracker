@@ -24,67 +24,41 @@ const Headers = () => {
   };
 
   return (
-    <>
-      <div className="min-w-80 mt-2 bg-gradient-to-r from-rose-200 to-rose-100 rounded-e-3xl">
-        <div className="grid grid-rows-5 gap-8 mt-6 justify-center">
-   
-          <div className="flex justify-center items-center">
-            <h1 className="text-2xl font-bold text-violet-700">
-              Welcome, <span className="text-pink-600">{profileName}!</span>
-            </h1>
-          </div>
+    <div className="w-full h-full md:w-64 p-4 bg-gradient-to-r from-rose-200 to-rose-100 rounded-e-3xl shadow-lg sticky top-0">
+      {/* Welcome Header */}
+      <div className="text-center mb-4">
+        <h1 className="text-2xl font-bold text-violet-700">
+          Welcome, <span className="text-pink-600">{profileName}!</span>
+        </h1>
+      </div>
 
-          <div className="flex gap-2 items-center group">
-            <div className="text-bold text-6xl">
-              <FcBullish />
-            </div>
-            <button className="text-xl text-violet-700 hover:text-violet-500 hover:bg-rose-200 px-3 py-1 rounded transition duration-300 group-hover:scale-105">
-              <Link to="/home/transaction">View Transactions</Link>
+      {/* Navigation Buttons */}
+      <div className="flex flex-col gap-3 items-center w-full">
+        {[
+          { icon: <FcBullish />, text: "View Transactions", link: "/home/transaction" },
+          { icon: <FcBriefcase />, text: "Incomes", link: "/home/incomes" },
+          { icon: <FcLeave />, text: "Expenses", link: "/home/expenses" },
+          { icon: <FcAlphabeticalSortingZa />, text: "Summary", link: "/home/summary" }
+        ].map(({ icon, text, link }, index) => (
+          <div key={index} className="flex gap-3 items-center w-full">
+            <div className="text-4xl">{icon}</div>
+            <button className="text-lg text-violet-700 hover:text-violet-500 hover:bg-rose-300 px-3 py-2 rounded w-full">
+              <Link to={link}>{text}</Link>
             </button>
           </div>
+        ))}
 
-    
-          <div className="flex gap-2 items-center group">
-            <div className="text-bold text-6xl">
-              <FcBriefcase />
-            </div>
-            <button className="text-xl text-violet-700 hover:text-teal-500 hover:bg-rose-200 px-3 py-1 rounded transition duration-300 group-hover:scale-105">
-              <Link to="/home/incomes">Incomes</Link>
-            </button>
-          </div>
-
-        
-          <div className="flex gap-2 items-center group">
-            <div className="text-bold text-6xl">
-              <FcLeave />
-            </div>
-            <button className="text-xl text-violet-700 hover:text-red-500 hover:bg-rose-200 px-3 py-1 rounded transition duration-300 group-hover:scale-105">
-              <Link to="/home/expenses">Expenses</Link>
-            </button>
-          </div>
-
-         
-          <div className="flex gap-2 items-center group">
-            <div className="text-bold text-6xl">
-              <FcAlphabeticalSortingZa />
-            </div>
-            <button className="text-xl text-violet-700 hover:text-green-500 hover:bg-rose-200 px-3 py-1 rounded transition duration-300 group-hover:scale-105">
-              <Link to="/home/summary">Summary</Link>
-            </button>
-          </div>
-
-        
-          <div className="flex gap-2 items-center group">
-            <button
-              onClick={() => handleLogout()}
-              className="text-xl font-bold text-red-500 hover:text-red-700 hover:bg-gray-100 px-3 py-1 rounded transition duration-300 group-hover:scale-105"
-            >
-              Logout
-            </button>
-          </div>
+        {/* Logout Button */}
+        <div className="flex gap-3 items-center w-full mt-2">
+          <button
+            onClick={handleLogout}
+            className="text-lg font-bold text-red-500 hover:text-red-700 hover:bg-gray-100 px-3 py-2 rounded w-full"
+          >
+            Logout
+          </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
