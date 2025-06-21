@@ -5,7 +5,7 @@
 https://expense-tracker-3-ejs5.onrender.com
 
 ## 📌 Description  
-**MERN Expense Tracker** is a full-stack web application built with the **MERN stack**: **MongoDB**, **Express.js**, **React.js**, and **Node.js**. It empowers users to efficiently track and manage their income and daily expenses. With features like dynamic categorization, real-time data updates, and interactive graphs, users can gain valuable insights into their financial habits and make informed spending decisions.
+**Expense Tracker** is a full-stack web application built with the **MERN stack**: **MongoDB**, **Express.js**, **React.js**, and **Node.js**. It empowers users to efficiently track and manage their income and daily expenses. With features like dynamic categorization, real-time data updates, and interactive graphs, users can gain valuable insights into their financial habits and make informed spending decisions.
 
 ## ✨ Features  
 - ➕ Add, ✏️ Edit, and ❌ Delete income and expense transactions  
